@@ -2,10 +2,10 @@ FROM golang:1.11
 
 USER nobody
 
-RUN mkdir -p /go/src/github.com/openshift/golang-ex
-WORKDIR /go/src/github.com/openshift/golang-ex
+RUN mkdir -p  /opt/app-root/src/
+WORKDIR  /opt/app-root/src/
 
-COPY . /go/src/github.com/openshift/golang-ex
+COPY .  /opt/app-root/src/
 RUN go build
 
-CMD ["./golang-ex"]
+CMD ["./src"]
